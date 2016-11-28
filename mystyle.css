@@ -3,7 +3,7 @@ P,h3,h6
 {
 Font-face: serif;
 Font-color : #ffffff;
-Font-size : 20px;
+Font-size : 70px;
 Font-weight : 300;
 Padding : 2em;
 Height  : 1.2em;
@@ -11,8 +11,6 @@ Height  : 1.2em;
 }
 HTML
 {
-Padding : 10px;
-Margins :2px;
 
 }
 H1
