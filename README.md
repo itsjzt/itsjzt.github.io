@@ -1,5 +1,6 @@
 
-This is the official page of Saurabh sharma where I provide all the achievement and projects under me.
-View the page http://jztsaurabh.github.io 
-I am new in programming but I really enjoy it.
-I'm also a tech blogger on gadget mentor.
+View the page http://www.jztsaurabh.github.com
+Hey guys I'm Saurabh Sharma. Co-founder of a growing tech blog http//www.Gadgetmentor.tk
+I am passinate about Programming & Blogging.
+currently i'm studying at Ambedker Institute of Technology.
+
