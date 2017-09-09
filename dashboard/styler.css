@@ -106,7 +106,7 @@ nav {
   margin: 10px;
 }
 
-img:hover {
+.img-responsive:hover {
   opacity: 0.5;
 }
 
