@@ -118,7 +118,7 @@ nav {
 }
 
 .delete-tab:hover:before {
-  content: 'click to delete!';
+  content: 'delete!';
   color: #123;
   position: absolute;
   padding: 32px;
