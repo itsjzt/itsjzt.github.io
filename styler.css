@@ -106,7 +106,7 @@ nav {
   margin: 10px;
 }
 
-.img-responsive:hover {
+.options .img-responsive:hover, .delete .img-responsive:hover {
   opacity: 0.5;
 }
 
