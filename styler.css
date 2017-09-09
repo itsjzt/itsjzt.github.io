@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  background: #000;
+  color:  #fff;
+}
+
+.avatar {
+  max-width:  300px;
+  height: auto;
+}
+
+.full {
+  width: 100%;
+}
+
+.navbar {
+  border: 0;
+  padding: 10px 0;
+}
+
+.navbar .navbar-brand {
+  color: inherit;
+  padding: 10px 30px;
+}
+
+.navbar .navbar-brand:hover {
+  color: #fed360;
+}
+
+.navbar-nav li a {
+  color: white;
+}
+
+.navbar-nav li a:hover {
+  background: #fed360;
+  color: black;
+}
+
+.bg-image {
+  position: absolute;
+  z-index: -1;
+  top: 60px;
+  left: 0;
+}
+
+.margin-120 {
+  margin-top: 120px;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: auto;
+  background: #FAFAFA;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .7);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:  wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.frame, .options, .upload, .delete {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.type {
+  background: #000;
+  color: #eee;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 8px;
+  font-weight: 500;
+  user-select: none;
+  transition: all 0.025s ease;
+}
+
+.type:hover {
+  opacity: 0.5;
+}
+
+.active {
+  transition: all .025s ease;
+  border: solid 5px #fed360;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+  color: #fed360;
+}
+
+.cover .options img {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+}
+
+.img-responsive:hover {
+  opacity: 0.5;
+}
+
+.image-tab {
+  width:  250px;
+  height: 200px;
+  border: solid 1px black;
+  margin: 8px;
+}
+
+.delete-tab:hover:before {
+  content: 'click to delete!';
+  color: #123;
+  position: absolute;
+  padding: 32px;
+  font: 20px Roboto;
+}
+
+.btn {
+  margin: 8px;
+}
+
+img {
+  transition: all 0.25 ease-in;
+}
