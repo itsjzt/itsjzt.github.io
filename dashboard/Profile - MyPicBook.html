@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <title>Profile - MyPicBook</title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <!--     Fonts and icons     -->
+    <base href="https://mypicbook.in/user_module/save_rotation">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+   <link href="assets/css/jquery.toast.min.css" rel="stylesheet" type="text/css">
+  <!-- CSS Files -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.toast.min.js"></script>
+<script type="text/javascript" src="assets/js/jQueryRotateCompressed.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<style type="text/css">
+
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #ffba00;
+    color: #000;
+}
+ .navbar-default .navbar-nav > .active{
+    color: #000;
+   background: #ffba00;
+ }
+body{ background-color:#000; font-family:sans-serif; padding:1em;}
+h1, p{text-align:center;}
+.cta{
+    background-color: white;
+    border:1px solid lightgrey;
+    border-radius:6px;
+    color: tomato;
+    display:inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    padding:.3em 1em;
+    text-decoration:none;
+    &:hover{
+      background-color:lightgrey;
+      color:slategrey;
+      text-decoration:none;
+    }
+}
+
+// Modal
+.modaloverlay{
+  background:rgba(0,0,0,0.8);
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  position:fixed;
+  right:0;
+  top:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  z-index:-1;
+  display: none;
+  &:target{
+    display: block;
+    opacity:1;
+    pointer-events:auto;
+    z-index:99999;
+  }
+  .modal{
+    background-color:white;
+    height: 100%;
+    position:relative;
+
+    padding:3em;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    @media (min-width: 60em) {
+      height:75%;
+  	 margin:5% auto;
+  	 max-height: 57em;
+      max-width:66em;
+      width:85%;
+  	}
+	> iframe, > div{
+		border:none;
+		width:100%;
+		height:100%;
+    }
+  }
+  .close{
+    background-color:turquoise;
+    color:white;
+    font-size:24px;
+    padding:8px 12px;
+    position:absolute;
+    right:0;
+    text-align:center;
+    text-decoration:none;
+    top:0;
+    z-index: 1;
+  }
+}
+
+
+.wrapper {
+  width: 100%;
+  color: #111;
+  background: #fff;
+  padding: 16px;
+}
+
+img {
+  transition: all 0.3s ease-in;
+  margin: auto;
+  width: 200px;
+  height: auto;
+}
+
+.fa {
+  padding: 0px 2px;
+}
+
+
+</style>
+  <div class="" id="myModal" role="dialog">
+
+    <div class="row modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="wrapper">
+        <div class="modal-header">
+
+          <h3 class="modal-title">Click on the photo to rotate it and then click on save button!</h3>
+        </div>
+        <div style="text-align: center;">
+        <br><br><br>
+          <img src="images_order/601_1_1/user_IMG-20170922-WA0000.jpg" id="image_modal" class="img-responsive" data-id="target_4" data-vl="">
+          <br>
+          <div class="button">
+            <h3>Rotate</h3>
+            <button class="btn btn-default rotate-anti" ><i class="fa fa-rotate-left"></i> AntiClockwise</button>
+            <button class="btn btn-default rotate-clock"><i class="fa fa-rotate-right"></i> Clockwise</button>
+          </div>
+
+          <br><br>
+           <button type="button" class="btn btn-success" id="save_image">Save changes</button>
+        </div>
+
+      </div>
+
+
+  </div>
+  </div>
+<script type="text/javascript" src="assets/js/jQueryRotateCompressed.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+   <script>
+ /* $(window).load(function() {
+    var x = document.getElementsByClassName("target_click2");
+    for (index = 0; index <20; ++index) {
+$("#target_"+index).attr('src', $("#target_"+index).attr('src') + '?' + Math.random());
+}
+});
+*/
+$(document).ready(function(){
+
+var ctr=0;
+ $(document).on('click', '.target_click2', function(){
+
+    var value=$(this).attr('data-vl');
+    var data_id=$(this).attr('data-id');
+
+          $("#image_modal").attr('src','');
+           $("#image_modal").attr('data-id',data_id);
+           $("#image_modal").attr('data-vl',value);
+        $("#myModal").modal();
+        $("#myModal").on('shown.bs.modal', function () {
+            $("#image_modal").attr('src',$("#target_"+data_id).attr('src'));
+               value=$(this).attr('data-vl')+ '?' + Math.random();
+               if(ctr==0)
+               {
+                 $("#image_modal").rotate({ animateTo:0, angle: 0});
+               }
+               else
+               {
+                $("#image_modal").rotate(0);
+              }
+    });
+
+    });
+var value=0;
+var angle = 0;
+// for clockwise
+    $(".rotate-clock").rotate({
+       bind:
+         {
+            click: function()
+            {
+
+                value+=90;
+                angle = value;
+
+                ctr++;
+                $("#image_modal").attr('data-vl',value);
+                $("#image_modal").rotate({ animateTo:value, angle: angle})
+            }
+         }
+    });
+
+    // for anticlockwise
+    $(".rotate-anti").rotate({
+       bind:
+         {
+            click: function()
+            {
+
+                value-=90;
+                angle = value;
+
+                ctr++;
+                $("#image_modal").attr('data-vl',value);
+                $("#image_modal").rotate({ animateTo:value, angle: angle})
+            }
+         }
+    });
+     $(document).on('click', '#save_image', function() {
+
+                var img_src=$("#image_modal").attr('src');
+                var img_id=$("#image_modal").attr('data-id');
+
+
+
+                if(ctr==1)
+                {
+                  value=270;
+                }
+                else if(ctr==2)
+                {
+                  value=180;
+                }
+                else if(ctr==3)
+                {
+                  value=90;
+                }
+                else if(ctr==4)
+                {
+                  value=0;
+                }
+             $('#loading').show();
+              $.post("save_new_image",{img_src:img_src,value:value},function(res){
+            console.log(res);
+             res=jQuery.parseJSON(res);
+
+              if(res['code']=="1")
+              {
+
+                value=value-90;
+               window.opener.setValue(img_id);
+               window.close();
+              }
+        });
+
+
+    });
+  $("#final_order").click(function()
+    {
+      window.location.href = "set-order-mypicbook.php"
+
+    });
+});
+</script>
