@@ -1,0 +1,459 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102176658-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+	<meta charset="utf-8" />
+
+	<title>MyPicBook</title>
+
+	<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+  <!--     Fonts and icons     -->
+  <!-- base -->
+  <base href="https://mypicbook.in/user_module/set-rotation-mypicbook">
+	<link rel="icon" href="favicon.png" type="image/png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <link href="assets/css/jquery.toast.min.css" rel="stylesheet" type="text/css">
+	<!-- CSS Files -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.toast.min.js"></script>
+  <script src="../js/jquery.toast.min.js"></script>
+  <script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <style type="text/css">
+  body {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+      background-color: #ffba00;
+      color: #000;
+    }
+    .navbar-default .navbar-nav > .active{
+      color: #000;
+      background: #ffba00;
+    }
+
+    .navbar .navbar-brand:hover, .navbar .navbar-brand:hover {
+    color: inherit;
+    color: #fed360;
+    background: inherit;
+    }
+
+  </style>
+</head>
+
+
+<body class="profile-page">
+  <nav class="navbar navbar-default" role="navigation" style="background: #000;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://mypicbook.in">MyPicBook</a>
+     </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+         <li><a  href="profile-page.php">My Photos</a></li>
+         <li><a  href="order.php">My orders</a></li>
+         <li><a  href="profile.php">My Profile</a></li>
+         <li><a  href="../module/logout.php">Logout</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
+  <div class="wrapper">
+		<div class="header header-filter" style="background-image: url('assets/img/examples/city.jpg');"></div>
+
+		<div class="main main-raised">
+			<div class="">
+        <div class="">
+            <div class="profile">
+                <img src="assets/img/profile-dp.jpg" alt="Circle Image" class="img-circle img-responsive">
+              <div class="name">
+                <h3 class="title">Saurabh Sharma <br><a href="../module/logout.php">Logout</a></h3>
+								<h6></h6>
+              </div>
+            </div>
+          <style>
+            .modal-body
+            {
+              text-align:center;
+            }
+            .skip-button{
+              text-align: center;
+              padding: 10px 20px;
+              background: #ffba00;
+              color: white;
+              margin: 30px auto 0 auto;
+              border-radius: 10px;
+              width: 60%;
+            }
+            .modal-header{
+              background: #ffba00;
+              background: #ffba00;
+              font-family: 'Sniglet';
+              font-size: 1em;
+              padding: 25px;
+            }
+            .modal {
+              position: fixed;
+              top: 10%;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 999;
+              /* display: none; */
+              overflow: hidden;
+              -webkit-overflow-scrolling: touch;
+              outline: 0;
+            }
+
+            .skip-button:hover, #final_order:hover, #save_image:hover{
+              background: #ef7c00;
+              border-color: #ef7c00;
+            }
+
+            a{
+              text-decoration: none;
+            }
+
+            a:hover{
+              text-decoration: none;
+              color: white;
+            }
+
+            #final_order{
+              text-align: center;
+              padding: 15px 25px;
+              background: #ffba00;
+              font-family: 'Sniglet';
+              font-size: 1em;
+              color: white;
+              margin: 20px auto 50px auto;
+              border-radius: 10px;
+            }
+
+            #save_image{
+              text-align: center;
+              padding: 15px 25px;
+              background: #ffba00;
+              font-family: 'Sniglet';
+              font-size: 1em;
+              color: white;
+              margin: 20px auto 50px auto;
+              border-radius: 10px;
+            }
+
+            .modal-header{
+              background: #ffba00;
+              background: #ffba00;
+              font-family: 'Sniglet';
+              font-size: 1em;
+              padding: 25px;
+            }
+            #myModal{
+              z-index: 9999
+            }
+            .label{
+
+            }
+            .modal-backdrop {
+              position:inherit;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index:9999;
+              background-color: #000;
+            }
+
+            .width300 {
+              margin: 0;
+             max-width: 700px;
+             min-width: 100px;
+            }
+          </style>
+          <link href="assets/css/app2.css" rel="stylesheet"/>
+          <link href="//rubaxa.github.io/Ply/ply.css" rel="stylesheet" type="text/css"/>
+
+
+          <!-- Multi connected lists -->
+          <a name="m"></a>
+          <div class="">
+            <div id="multi">
+
+              <div>
+                <!-- <div class="text-center width300">Please click on the photo to rotate photo as per your requirement.<br><br>Note: Photos are bound in PICBOOK from left side, please edit accordingly. feel free to reach us in case of any queries, we will be happy to help you.
+                </div> -->
+                <div class="tile__list ">
+
+
+                  <img src="images_order/601_1_1/user_IMG-20170904-WA0003.jpg" id="target_0" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="0" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_IMG-20170905-WA0000.jpg" id="target_1" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="1" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_IMG-20170921-WA0002.jpg" id="target_2" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="2" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_IMG-20170921-WA0003.jpg" id="target_3" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="3" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_IMG-20170922-WA0000.jpg" id="target_4" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="4" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_IMG-20170922-WA0001.jpg" id="target_5" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="5" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_IMG-20170923-WA0000.jpg" id="target_6" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="6" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_Navneet-Jethwani_list.png" id="target_7" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="7" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_Nikhil-Srivastava_list.png" id="target_8" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="8" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_Nitin-Vijay_list.png" id="target_9" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="9" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_Rajat-Goyal_list.png" id="target_10" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="10" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_Ram%20Ratan-Dwivedi_list.png" id="target_11" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="11" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_SOMESH-JAIN_list.png" id="target_12" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="12" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_a.html" id="target_13" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="13" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_a.js" id="target_14" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="14" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_like.html" id="target_15" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="15" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_list_002.html" id="target_16" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="16" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_nc-sir-photoshoot_list.png" id="target_17" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="17" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_neeraj-kr-choudhary_list.png" id="target_18" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="18" data-vl="0">
+
+
+                  <img src="images_order/601_1_1/user_sky_banner_0607.jpg" id="target_19" class="target_click2" style="background: inherit; cursor: pointer;margin: 10px;padding: 10px;height: 133px;object-fit: contain;width:200px;margin-bottom: 30px;" data-id="19" data-vl="0">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="next">
+            <a class="btn" href="set-order-mypicbook.php">
+                Proceed
+            </a>
+
+          </span>
+
+          <footer class="footer">
+            <div class="text-center">
+              &copy; MyPicBook 2017
+            </div>
+          </footer>
+          <!-- Modal -->
+
+        </div>
+
+      </div>
+
+
+      <style type="text/css">
+
+      .container {
+        margin: 32px;
+      }
+
+        img {
+          cursor: pointer;margin: 10px;padding: 10px;height: 240px;background-color:#FFF; object-fit: contain;
+        }
+        #loading-image {
+          position: absolute;
+          top: 34%;
+          left: 30%;
+          z-index: 100;
+
+        }
+
+        .next {
+          margin-left: calc(45vw);
+        }
+
+        #loading
+        {
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+          position: fixed;
+          font-size: 28px;
+          background-color:rgba(158, 158, 158, 0.82);
+          z-index: 99;
+          text-align: center;
+          display: none;
+          color: white;
+          font-weight: bold;
+        }
+        .pulse2 {
+          -webkit-animation: pulse2 1s linear infinite;
+          -moz-animation: pulse2 1s linear infinite;
+          -ms-animation: pulse2 1s linear infinite;
+          animation: pulse2 1s linear infinite;
+        }
+
+        @keyframes "pulse2" {
+          0% {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          50% {
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+          }
+          100% {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+
+        }
+
+        @-moz-keyframes pulse2 {
+          0% {
+            -moz-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          50% {
+            -moz-transform: scale(0.8);
+            transform: scale(0.8);
+          }
+          100% {
+            -moz-transform: scale(1);
+            transform: scale(1);
+          }
+
+        }
+
+        @-webkit-keyframes "pulse2" {
+          0% {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          50% {
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+          }
+          100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+
+        }
+
+        @-ms-keyframes "pulse2" {
+          0% {
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+          50% {
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+          }
+          100% {
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+
+        }
+
+      }
+    </style>
+
+    <script type="text/javascript" src="assets/js/jQueryRotateCompressed.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script>
+      /* $(window).load(function() {
+        var x = document.getElementsByClassName("target_click2");
+        for (index = 0; index <20; ++index) {
+          $("#target_"+index).attr('src', $("#target_"+index).attr('src') + '?' + Math.random());
+        }
+      });
+      */
+      function setValue(img_id)
+      {
+
+        $("#"+img_id).attr('src', $("#"+img_id).attr('src') + '?' + Math.random());
+      }
+      $(document).ready(function(){
+
+        var ctr=0;
+        $(document).on('click', '.target_click2', function(){
+          var src_img=$(this).attr('src');
+          var img_id=$(this).attr('id');
+          var w=650;
+          var h=400;
+          var left = (screen.width/2)-(w/2);
+
+          var top = (screen.height/2)-(h/2);
+          var win=window.open("save_rotation.php?img_scr="+src_img+"&id="+img_id, "Rotation", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+
+        });
+
+        $("#final_order").click(function()
+        {
+          window.location.href = "set-order-mypicbook.php"
+
+        });
+      });
+    </script>
+    <script src="//yandex.st/highlightjs/7.5/highlight.min.js"></script>
+    <script src="../st/smooth-scroll.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+  </body>
+  </html>
