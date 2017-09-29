@@ -35,12 +35,6 @@
   <script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
   <style type="text/css">
-  body {
-    max-width: 100vw;
-    display: flex;
-    flex-direction: column;
-  }
-
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       background-color: #ffba00;
       color: #000;
@@ -54,6 +48,10 @@
     color: inherit;
     color: #fed360;
     background: inherit;
+    }
+
+    .header {
+      margin-top: -20px;
     }
 
   </style>
@@ -190,11 +188,6 @@
               background-color: #000;
             }
 
-            .width300 {
-              margin: 0;
-             max-width: 700px;
-             min-width: 100px;
-            }
           </style>
           <link href="assets/css/app2.css" rel="stylesheet"/>
           <link href="//rubaxa.github.io/Ply/ply.css" rel="stylesheet" type="text/css"/>
@@ -206,8 +199,7 @@
             <div id="multi">
 
               <div>
-                <!-- <div class="text-center width300">Please click on the photo to rotate photo as per your requirement.<br><br>Note: Photos are bound in PICBOOK from left side, please edit accordingly. feel free to reach us in case of any queries, we will be happy to help you.
-                </div> -->
+                <div class="alert alert-warning">Please click on the photo to rotate photo as per your requirement.<br><br>Note: Photos are bound in PICBOOK from left side, please edit accordingly. feel free to reach us in case of any queries, we will be happy to help you.</div>
                 <div class="tile__list ">
 
 
@@ -296,6 +288,11 @@
 
       <style type="text/css">
 
+      .next {
+        display: flex;
+        justify-content: center;
+      }
+
       .container {
         margin: 32px;
       }
@@ -309,10 +306,6 @@
           left: 30%;
           z-index: 100;
 
-        }
-
-        .next {
-          margin-left: calc(45vw);
         }
 
         #loading
