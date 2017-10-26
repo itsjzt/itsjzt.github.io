@@ -3,10 +3,10 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  background: #34e89e;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: white;
+  background: #222233;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #53346D, #222233);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #53346D, #222233); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
   font-family: 'Operator Mono', 'Roboto mono', 'SF mono', 'Consolas', monospace;     
 }
 
