@@ -1,12 +1,8 @@
-**these days it have a lot of mess so, ;-;**
+## Github Page 
 
-**It also have a blog by Bram Moolenaar of November 2000 with inhanced readibility**
+> Also the place to host random stuff
 
-Page: https://itsjzt.github.io
+page: https://itsjzt.github.io
 
-Me: Saurabh Sharma
-
-Blog: https//www.Gadgetmentor.tk
-
-Passinate about: Programming & Blogging.
+Blog: https://www.gadgetmentor.tk
 
