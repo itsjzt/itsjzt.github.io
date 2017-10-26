@@ -53,15 +53,15 @@ nav {
   background: #fff;
   color: #47b;
   text-decoration: none;
-  font-family: 'Operator Mono', 'Roboto', monospace;
+  font-family: 'Operator Mono', 'Roboto mono', 'SF mono', 'Consolas', monospace;
   padding: 4px 8px;
   margin: 8px;
   /* special effects */
-  font-weight: 500;  
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.125);  
   transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .btn:hover {
-  font-weight: 600;
+  background: #47b;
+  color: #fff;
 }
