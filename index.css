@@ -8,7 +8,7 @@ body {
 }
 
 .flex, .social {
-  font-family: 'Operator Mono', 'Roboto', monospace;  
+  font-family: 'Operator Mono', 'Roboto mono', 'SF mono', 'Consolas', monospace;  
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,7 +18,7 @@ body {
 
 h1, h2, h3, a[href] {
   margin: 8px;
-  font-family: 'Operator Mono', 'Roboto', monospace;
+  font-family: 'Operator Mono', 'Roboto mono', 'SF mono', 'Consolas', monospace;
   font-weight: 400;
 }
 
