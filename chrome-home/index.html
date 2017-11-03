@@ -13,17 +13,13 @@
 
 <body>
   <div class="wrapper wrapper--flex-center">
-    <<div class="card card--shadow card--white card--flex-row">
-      <div class="image">
-        <img class="image__google--image" src="https://www.google.co.in/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" width="136" height="46">      
-      </div>
-      <div class="input">
-        <div class="input--main">
-          <form class="form--center" action="https://google.com/search">
-            <input class="input__main" id="search" name="q" maxlength="2048" autocomplete="on" title="Search with Google" type="text" value="" dir="ltr" spellcheck="true">
-            <button class="input__btn btn--sr--only" type="submit">Search</button>
-          </form>
-        </div>
+    <div class="input">
+      <div class="input--main">
+        <form class="form--center" action="https://google.com/search">
+          <label for="input" class="label label--block label--jumbo label--shadow">Search with Google</label>
+          <input class="input__main" name="q" maxlength="2048" autocomplete="on" title="Search with Google" type="text" value="" autofocus>
+          <button class="input__btn btn--sr--only" type="submit">Search</button>
+        </form>
       </div>
     </div>
     <div class="footer footer--fixed more--link">
