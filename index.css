@@ -3,14 +3,17 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  background: #222233;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #53346D, #222233);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #53346D, #222233); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
-  font-family: 'Operator Mono', 'Roboto mono', 'SF mono', 'Consolas', monospace;     
+  font-size: 16px;
+  font-family: sans-serif;
+
+  user-select: fff;
+  background: #222233;
+  background: -webkit-linear-gradient(to right, #53346D, #222233);
+  background: linear-gradient(to right, #53346D, #222233);
+  color: white;
 }
 
-.flex, .social {
+.flex {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,18 +22,21 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: inherit;
+  font-family: 'Acme', sans-serif;
+  margin: 8px;
+  padding: 8px;
 }
 
-nav {
-  border: solid 1px white;
-  border-top: none;
-  padding: 12px;
-  border-bottom-left-radius: 40%;
-  border-bottom-right-radius: 40%;  
-  position: fixed;
-  top: 0;
-  left: 16px;
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: 300;
 }
 
 .wrapper {
@@ -45,3 +51,27 @@ nav {
   padding: 4px 12px;
 }
 
+.cta-btn {
+  font: inherit;
+  width: 10rem;
+  height: 3rem;
+  background: inherit;
+  color: white;
+  border: solid 1px white;
+  border-radius: 3rem;
+  margin: 1rem;
+  transition: all 0.125s ease-in-out;
+}
+
+.cta-btn:hover {
+  color: #53346D;
+  background: white;
+}
+
+.social {
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
