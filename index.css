@@ -51,23 +51,6 @@ h3 {
   padding: 4px 12px;
 }
 
-.cta-btn {
-  font: inherit;
-  width: 10rem;
-  height: 3rem;
-  background: inherit;
-  color: white;
-  border: solid 1px white;
-  border-radius: 3rem;
-  margin: 1rem;
-  transition: all 0.125s ease-in-out;
-}
-
-.cta-btn:hover {
-  color: #53346D;
-  background: white;
-}
-
 .social {
   margin: auto;
 }
