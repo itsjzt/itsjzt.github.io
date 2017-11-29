@@ -1,7 +1,8 @@
 ## Github Page 
 
-> Also the place to host random stuff
-> and [freeCodeCamp](https://freeCodeCamp.org)'s challenges
+(https://itsjzt.github.io)
 
-
-> 'coz codepen have some cross-origin issues with fetch and axios   
+**Linked urls**
+- <url>/browser-home
+- <url>/reddit-app
+- <url>/utility-css 
