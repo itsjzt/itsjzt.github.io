@@ -1,11 +1,13 @@
 body {
   width: 100%;
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%232a2336' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+html {
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: #f3f5f7;
-  color: #222233;
 }
 
 * {
@@ -14,80 +16,57 @@ body {
   box-sizing: border-box;
 }
 
-.flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.text-mg {
-  margin: 16px 8px;
-}
-
-.text-mer {
-  font-family: "Merienda", serif;
-}
-
-.text-3rem {
-  font-size: 3rem;
-}
-
-.text-roboto {
-  font-family: "Roboto", sans-serif;
-}
-
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 860px;
+  margin: 5vh auto;
+  background: #ffffff;
+  padding: 72px;
 }
 
-.link {
-  color: inherit;
-  font-family: inherit;
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-.social {
+.header {
+  max-width: 960px;
+  width: 100%;
   margin: auto;
+  background: inherit;
+  color: white;
+  font-weight: 900;
+  line-height: 1.1;
 }
 
-.center {
-  text-align: center;
+.header-headline {
+  margin-top: 20px;
+  font-size: 67.5px;
 }
 
-.mark {
-  border-bottom: solid 1px #ff9d00;
-  padding: 2px;
+.content {
+  font-size: 22px;
+  line-height: 1.5;
 }
 
-.ribbon {
-  background: #f7ff00; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #db36a4,
-    #f7ff00
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #db36a4,
-    #f7ff00
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  width: 100vw;
-  height: 1rem;
+.projects li > a {
+  text-decoration: underline;
+  color: inherit;
+  font: inherit;
 }
 
-.top {
-  position: fixed;
-  top: 0;
-  left: 0;
+.projects li > a:hover {
+  text-decoration: underline;
 }
 
-svg {
-  width: 40px;
-  height: 40px;
-  margin: 12px;
+.header .social {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header .social a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 22px;
+  transition: all 0.25s ease;
+}
+
+.header .social a:hover {
+  transform: scale(1.5);
 }
