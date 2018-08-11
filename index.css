@@ -68,9 +68,17 @@ html {
 .projects,
 .blog {
   background: #ffffff;
-  padding: 64px;
+  padding: 32px;
   margin-bottom: 64px;
   box-shadow: 0 4px 4px 1px #e0e0e0;
+}
+
+@media screen and (min-width: 600px) {
+  .content,
+  .projects,
+  .blog {
+    padding: 64px;
+  }
 }
 
 .projects li {
