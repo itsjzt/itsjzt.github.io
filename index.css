@@ -14,6 +14,10 @@ html {
   font-size: 16px;
 }
 
+.fa {
+  transform: scale(1.25);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -61,17 +65,32 @@ html {
 }
 
 .content,
-.projects {
+.projects,
+.blog {
   background: #ffffff;
   padding: 64px;
   margin-bottom: 64px;
-  box-shadow: 0 6px 6px 2px #e0e0e0;
+  box-shadow: 0 4px 4px 1px #e0e0e0;
 }
 
-.projects li > a {
-  text-decoration: underline;
-  color: #557de8;
+.projects li {
+  list-style-type: '\1F4BB';
+}
+
+.projects li:nth-child(even) {
+  list-style-type: '\1F517';
+}
+
+.projects a,
+.blog a,
+.content a {
+  text-decoration: none;
+  color: #8661c1;
   font: inherit;
+}
+
+.projects .project-detail {
+  margin-bottom: 16px;
 }
 
 .header .social {
