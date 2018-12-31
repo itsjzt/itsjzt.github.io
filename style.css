@@ -53,8 +53,8 @@ html {
   letter-spacing: 1px;
   font-size: calc(5vw + 16px);
   margin: 1rem auto;
-  cursor: cell;
   font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 }
 
 .header-headline span {
