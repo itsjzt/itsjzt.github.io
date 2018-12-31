@@ -84,17 +84,20 @@ html {
 }
 
 .header .social {
-  max-width: 500px;
-  margin: 20px auto;
-  display: flex;
-  justify-content: space-around;
+  max-width: 300px;
+  margin: 2rem auto;
 }
 
 .header .social a {
+  display: inline-block;
   text-decoration: none;
-  color: inherit;
-  font-size: 22px;
-  transition: all 0.25s ease;
+}
+
+.header .social a i {
+  font-size: 1.5rem;
+  background: #fff;
+  color: #8661c1;
+  padding: 0.5rem;
 }
 
 .header .social a:hover {
