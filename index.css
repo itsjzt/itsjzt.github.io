@@ -75,17 +75,6 @@ html {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 }
 
-@media screen and (min-width: 600px) {
-  .content,
-  .projects,
-  .blog {
-    padding: 64px;
-  }
-  .projects-list {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .projects a,
 .blog a,
 .content a {
@@ -120,12 +109,13 @@ html {
 .projects-list {
   list-style: none;
   display: grid;
+  justify-content: center;
+  grid-template-columns: minmax(200px, 320px);
   grid-gap: 1rem;
 }
 
 .project-card {
-  max-width: 300px;
-  margin: 0 auto;
+  max-width: 100%;
   display: inline-block;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 }
@@ -138,6 +128,7 @@ html {
 
 .project-card .project-img {
   margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .project-card .project-detail {
@@ -146,4 +137,15 @@ html {
   font-size: 1.125rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .content,
+  .projects,
+  .blog {
+    padding: 64px;
+  }
+  .projects-list {
+    grid-template-columns: 350px 350px;
+  }
 }
