@@ -5,7 +5,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,
     sans-serif;
   background-color: #fff;
-  color: #232323;
+  color: #4b4b4b;
   font-size: 1.25rem;
   background-color: #f4f0f9;
   background-image: url("static/texture.svg");
@@ -28,7 +28,7 @@ html {
 
 .wrapper {
   position: relative;
-  max-width: 860px;
+  max-width: 1000px;
   margin: 0 auto;
   z-index: 1;
 }
@@ -81,6 +81,9 @@ html {
   .blog {
     padding: 64px;
   }
+  .projects-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .projects a,
@@ -89,10 +92,6 @@ html {
   text-decoration: none;
   color: #8661c1;
   font: inherit;
-}
-
-.projects .project-detail {
-  margin-bottom: 16px;
 }
 
 .header .social {
@@ -116,4 +115,35 @@ html {
 .projects-headline {
   margin: 1rem auto;
   display: block;
+}
+
+.projects-list {
+  list-style: none;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.project-card {
+  max-width: 300px;
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.project-card .project-name[href] {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 500;
+}
+
+.project-card .project-img {
+  margin-bottom: 0.5rem;
+}
+
+.project-card .project-detail {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
