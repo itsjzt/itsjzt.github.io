@@ -92,17 +92,19 @@ html {
 .header .social a {
   display: inline-block;
   text-decoration: none;
+  transition: all 0.35s ease-in-out;
 }
 
-.header .social a i {
-  font-size: 1.5rem;
+.header .social a {
+  font-size: 1.75rem;
   background: #fff;
   color: #8661c1;
   padding: 0.5rem;
 }
 
 .header .social a:hover {
-  transform: scale(2);
+  /* transform: scale(2); */
+  border-radius: 50%;
 }
 
 .projects-headline {
