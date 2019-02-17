@@ -1,5 +1,7 @@
 # Embracing Less
 
+![Photo by Robert Shunev on Unsplash](https://cdn-images-1.medium.com/max/800/0*7VD_tXRhmEeXNhuj)
+
 > You probably aren't gonna to need a blogging system
 
 [Why Blogging](https://dev.to/aspittel/blogging-as-a-developer--5h0m)
