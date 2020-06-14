@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -18,12 +24,6 @@ html {
 
 .fa {
   transform: scale(1.25);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .wrapper {
@@ -153,7 +153,7 @@ html {
   align-items: center;
 }
 
-.contact a button {
+.contact-button {
   color: #e0dfdf;
   padding: 0.5rem 1rem;
   margin-left: 0.5rem;
@@ -163,9 +163,10 @@ html {
   background: #8661c1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.contact a button:active {
+.contact-button:active {
   outline: none;
   transform: translateY(-2px);
 }
