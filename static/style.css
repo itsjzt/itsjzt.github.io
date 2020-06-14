@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* normalized removed border-box */
+  box-sizing: border-box;
+}
+
+html {
+  /* for easier rem usage */
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.background {
+  width: 100%;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: cornflowerblue;
+}
+
+main {
+  width: 100%;
+  max-width: 160rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: palegoldenrod;
+}
