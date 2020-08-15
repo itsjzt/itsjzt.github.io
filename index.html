@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="static/normalize.css" />
     <link rel="stylesheet" href="static/style.css" />
     <meta name="theme-color" content="#4285f4" />
+    <meta
+      name="description"
+      content="Saurabh Sharma is a web developer based in India. He made things
+          (mostly webapps) to solve business problems. He really admire the open
+          nature of web. No single person/corporation controls the entire web
+          unlike"
+    />
   </head>
 
   <body>
@@ -164,15 +171,15 @@
 
         <p>
           I'm very social, If you want to contact me you can
-          <a id="link-email" href="#">
+          <a id="email-link" href="#">
             <img
               src="static\icons\fontawesome-free-5.14.0-web\fontawesome-free-5.14.0-web\svgs\solid\envelope-open-text.svg"
               class="icon"
               alt="email icon"
             />
             email me</a
-          >. If you just to be friends you can follow me (I will follow you
-          back) on
+          >. If you just to be friends you can follow me (I will follow you back
+          <span aria-hidden="true">😏</span>) on
           <a href="https://twitter.com/itsjzt">
             <img
               src="static\icons\fontawesome-free-5.14.0-web\fontawesome-free-5.14.0-web\svgs\brands\twitter.svg"
@@ -207,51 +214,37 @@
             Dev.to</a
           >
         </p>
-        <!-- <section class="intro">
-          <div>
-            <div class="into-actions">
-              <button>Download CV</button>
-              <button>Contact</button>
-            </div>
-          </div>
-        </section>
-        <section class="skills">
-          <ul>
-            <li>React.js</li>
-            <li>GraphQL</li>
-            <li>Typescript</li>
-            <li>Node.js</li>
-          </ul>
-        </section>
-        <section class="my-works">
-          <ul>
-            <li>Shopify Apps</li>
-            <li>greyoutline</li>
-          </ul>
-        </section>
-        <section class="hobbies">
-          <ul>
-            <li>Reading Books</li>
-            <li>Learning new things</li>
-          </ul>
-        </section>
-        <section class="blogs-and-other-fun">
-          <ul>
-            <li>dev.to posts</li>
-            <li>medium posts</li>
-            <li>codepens</li>
-            <li>observableHQ</li>
-          </ul>
-        </section>
-        <section class="social-and-contact">
-          <ul>
-            <li>Instagram</li>
-            <li>codepen</li>
-            <li>dev.to</li>
-            <li>twitter</li>
-          </ul>
-        </section> -->
       </main>
     </div>
+    <script>
+      function rot13(str) {
+        let re = new RegExp("[a-z]", "i");
+        let min = "A".charCodeAt(0);
+        let max = "Z".charCodeAt(0);
+        let factor = 13;
+        let result = "";
+        str = str.toUpperCase();
+
+        for (let i = 0; i < str.length; i++) {
+          result += re.test(str[i])
+            ? String.fromCharCode(
+                ((str.charCodeAt(i) - min + factor) % (max - min + 1)) + min
+              )
+            : str[i];
+        }
+
+        return result;
+      }
+
+      function handleEmail(e) {
+        e.preventDefault();
+        const emailLink = rot13("znvygb:fnhenou.19@bhgybbx.pbz");
+        window.open(emailLink);
+      }
+
+      document
+        .getElementById("email-link")
+        .addEventListener("click", handleEmail);
+    </script>
   </body>
 </html>
