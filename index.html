@@ -171,7 +171,7 @@
 
         <p>
           I'm very social, If you want to contact me you can
-          <a id="email-link" href="#">
+          <a href="mailto:saurabh.19@outlook.com">
             <img
               src="static\icons\fontawesome-free-5.14.0-web\fontawesome-free-5.14.0-web\svgs\solid\envelope-open-text.svg"
               class="icon"
@@ -216,35 +216,40 @@
         </p>
       </main>
     </div>
-    <script>
-      function rot13(str) {
-        let re = new RegExp("[a-z]", "i");
-        let min = "A".charCodeAt(0);
-        let max = "Z".charCodeAt(0);
-        let factor = 13;
-        let result = "";
-        str = str.toUpperCase();
-
-        for (let i = 0; i < str.length; i++) {
-          result += re.test(str[i])
-            ? String.fromCharCode(
-                ((str.charCodeAt(i) - min + factor) % (max - min + 1)) + min
-              )
-            : str[i];
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Saurabh",
+        "jobTitle": "Web developer",
+        "telephone": "+918076623211",
+        "email": "saurabh.19@outlook.com",
+        "url": "http://itsjzt.github.io",
+        "alumniOf": "Ambedkar Insitute Of Technology",
+        "familyName": "Sharma",
+        "gender": "MALE",
+        "knowsAbout": [
+          "Javascript",
+          "Typescript",
+          "GraphQL",
+          "React.js",
+          "Svelte.js"
+        ],
+        "knowsLanguage": ["English", "Hindi"],
+        "nationality": "INDIA",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Codeword Tech",
+          "url": "https://codeword.tech",
+          "description": "We are an independent creative collective based in New Delhi, India. We collaborate with companies, brands and startups across all digital platforms, focusing on eCommerce and retail experience."
+        },
+        "alternateName": "itsjzt",
+        "description": "sdklsadj slakdj asd",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://itsjzt.github.io/static/avatar.jpg"
         }
-
-        return result;
       }
-
-      function handleEmail(e) {
-        e.preventDefault();
-        const emailLink = rot13("znvygb:fnhenou.19@bhgybbx.pbz");
-        window.open(emailLink);
-      }
-
-      document
-        .getElementById("email-link")
-        .addEventListener("click", handleEmail);
     </script>
   </body>
 </html>
