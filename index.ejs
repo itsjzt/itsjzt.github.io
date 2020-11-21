@@ -1,0 +1,26 @@
+<section class="intro">
+  <h1><%- intro.title %></h1>
+  <p><%- intro.description %></p>
+</section>
+
+<section class="projects-section">
+  <h2>Products that I've worked on</h2>
+  <ul class="projects-list">
+    <% projects.forEach(project => { %>
+    <li class="project">
+      <span> ⭐ <%= project.ratings %> </span>
+      <img
+        src="<%= project.logo %>"
+        alt="<%= project.name %>'s logo"
+        width="120"
+        height="120"
+      />
+      <ul>
+        <% project.highlights.forEach(highlight => { %>
+        <li><%= highlight %></li>
+        <% }) %>
+      </ul>
+    </li>
+    <% }) %>
+  </ul>
+</section>
