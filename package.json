@@ -20,6 +20,7 @@
   "homepage": "https://github.com/itsjzt/itsjzt.github.io#readme",
   "dependencies": {
     "browser-sync": "^2.26.7",
-    "ejs": "^3.1.5"
+    "ejs": "^3.1.5",
+    "liquid": "^5.1.1"
   }
 }
