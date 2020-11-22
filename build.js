@@ -122,7 +122,7 @@ function build() {
   });
 
   engine.parseAndRender(liquidSource, data).then((result) => {
-    fs.writeFileSync(path.join(__dirname, "index2.html"), result);
+    fs.writeFileSync(path.join(__dirname, "index.html"), result);
   });
 }
 
