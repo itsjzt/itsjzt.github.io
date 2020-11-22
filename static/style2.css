@@ -22,6 +22,11 @@ h1 {
   font-size: 2.15em;
 }
 
+mark {
+  background: inherit;
+  border-bottom: solid 4px rgba(247, 215, 72, 0.75);
+}
+
 .intro {
   padding: 1.5em;
   text-align: center;

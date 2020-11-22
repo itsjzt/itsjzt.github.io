@@ -6,9 +6,9 @@ const engine = new Liquid.Engine();
 
 const data = {
   intro: {
-    title: "Hello, <mark>I;m Saurabh</mark>",
+    title: "Hello, I'm <mark>Saurabh Sharma</mark>",
     description:
-      "I'm a Web Developer, UI/UX Engineer. I build websites for a tech company in Silicon Valley. You can find my work on Codepen, Github and Instagram. I also love digital art, so you'll find me posting on Dribbble occasionally. If you would like to work with me, drop me an email.",
+      "I'm a Web Developer. I build websites and apps, mostly making shopify apps and themes these days. You can find my work on Codepen, Github and Shopify App Store. If you would like to work with me, drop me an email.",
   },
   works: {
     title: "Projects that I've worked on",
@@ -83,11 +83,19 @@ const data = {
     title: "Blogs",
     description: "",
     articles: [
-      { title: "Try these 4 languages from 4 corners of Programming", url: "" },
-      { title: "Declarative Programming & React", url: "" },
+      {
+        title: "Try these 4 languages from 4 corners of Programming",
+        url:
+          "https://dev.to/itsjzt/try-these-4-languages-from-4-corners-of-programming-epm",
+      },
+      {
+        title: "Declarative Programming & React",
+        url: "https://dev.to/itsjzt/declarative-programming--react-3bh2",
+      },
       {
         title: "My favorite people to stay updated in web development space",
-        url: "",
+        url:
+          "https://dev.to/itsjzt/my-favorite-people-to-stay-updated-in-web-development-space-3950",
       },
       {
         title: "and many more...",
@@ -97,15 +105,19 @@ const data = {
   },
   socialMedia: {
     title: "Social Media",
-    description: "",
+    description:
+      "Not much active on social media but still if you want to follow along",
     platforms: [
       { title: "Facebook", url: "https://facebook.com/itsjzt" },
       { title: "Twitter", url: "https://twitter.com/itsjzt" },
       { title: "Instagram", url: "htttps://instagram.com/itsjzt" },
-      { title: "Telegram", url: "https://telegram.org/@itsjzt" },
-      { title: "Github", url: "https://github.com/itsjzt" },
-      { title: "LinkedIn", url: "https://linkedin.com/itsjzt" },
-      { title: "Codepen", url: "https://codepen.io/itsjzt" },
+      { title: "Telegram", url: "https://t.me/itsjzt" },
+      { title: "LinkedIn", url: "https://www.linkedin.com/in/itsjzt/" },
+      {
+        title: "Github ( find my one-off projects here )",
+        url: "https://github.com/itsjzt",
+      },
+      { title: "Codepen ( and here too )", url: "https://codepen.io/itsjzt" },
     ],
   },
   email: {
