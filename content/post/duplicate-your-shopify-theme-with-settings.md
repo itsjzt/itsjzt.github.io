@@ -1,21 +1,17 @@
 +++
-draft = false
 date = "2019-12-23T12:09:32+02:00"
-publishdate = "2019-12-23T12:09:32+02:00"
 
 title = "Markdown Syntax Guide"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-summary = "This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme."
 
 tags = [
     "markdown",
     "amperage"
 ]
 
-keywords = ['hugo', 'markdown', 'example']
 +++
 
-duplicate your shopify theme with setting and images
+## duplicate your shopify theme with setting and images
 
 - download the theme in zip
 - use [Exim App](https://apps.shopify.com/exim-export-import-pages-blogs-theme-settings)
