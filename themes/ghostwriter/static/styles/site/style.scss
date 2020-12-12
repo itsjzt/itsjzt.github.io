@@ -2,23 +2,37 @@
 // ============================================================ //
 // ============================================================ //
 
-$primary: #00967d;
+$primary: #15796E;
 $secondary: #303030;
 $background: #fefefe;
+$sans-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$serif-font-stack: 'Iowan Old Style', 'Apple Garamond', Baskerville, 'Times New Roman', 'Droid Serif', Times, 'Source Serif Pro', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$mono-font-stack: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
 
 /* ============================================================ */
 /* Base */
 /* ============================================================ */
 
-html,
-body {
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
   height: 100%;
 }
 
 body {
+  height: 100%;
   background: $background;
   color: #424242;
   font-size: 18px;
+  font-family: $sans-font-stack;
+}
+
+code, pre {
+  font-family: $mono-font-stack;
 }
 
 h1,
@@ -27,30 +41,31 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: inherit;
   margin-bottom: 20px;
   text-transform: none;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 32px;
 }
 h2 {
-  font-size: 24px;
+  font-size: 28px;
 }
 h3 {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 h4 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 18px;
 }
 h5 {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 15px;
 }
 h6 {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 12px;
 }
 
@@ -230,7 +245,7 @@ table {
   font-size: 14px;
   font-weight: 700;
   padding: 10px 12px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   &:hover {
     background: $primary;
@@ -266,12 +281,22 @@ table {
   padding: 40px 0 0;
   overflow: auto;
   text-align: center;
-  text-transform: uppercase;
+  background-color: $primary;
+  color: $background;
+  // text-transform: uppercase;
 }
 
 .site-title-wrapper {
-  display: table;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
   margin: 0 auto;
+}
+
+.site-title-links {
+  width: 100%;
+  max-width: 400px;
+  margin-right: auto;
 }
 
 .site-title {
@@ -279,7 +304,7 @@ table {
   font-size: 14px;
   font-weight: 600;
   margin: 0;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   a {
     float: left;
@@ -312,8 +337,8 @@ table {
   font-weight: 700;
   margin: 0 10px;
 
-  a:hover {
-    color: #424242;
+  a[href] {
+    color: $background
   }
 }
 
@@ -330,11 +355,11 @@ table {
 }
 
 .post-header {
-  border-bottom: 6px solid $secondary;
-  margin: 0 0 20px;
-  padding: 0 0 20px;
+  // border-bottom: 6px solid $secondary;
+  // margin: 20px 0 20px;
+  padding-top: 20px;
   text-align: center;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 .post-title,
@@ -343,7 +368,7 @@ table {
   font-weight: 700;
   margin: 15px 0;
   text-align: center;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 .page-title {
@@ -458,7 +483,7 @@ table {
   font-weight: 600;
   margin: 0 5px;
   padding: 5px 10px 6px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   &:hover {
     background: $secondary;
@@ -515,19 +540,19 @@ table {
   font-size: 10px;
   margin: 7px 0 0;
   padding: 0 5px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 .post-stub-title {
   display: inline-block;
   margin: 0;
-  text-transform: none;
+  // text-transform: none;
 }
 
 .post-stub-description {
   display: inline-block;
   margin: 0;
-  text-transform: none;
+  // text-transform: none;
 }
 
 .post-stub-date {
@@ -580,7 +605,7 @@ table {
   font-size: 52px;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   vertical-align: middle;
 }
 
@@ -591,7 +616,7 @@ table {
   line-height: 1;
   margin: 25px 0 0;
   text-align: center;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   span {
     display: inline-block;
@@ -628,6 +653,7 @@ table {
   overflow: auto;
 
   .site-title-wrapper {
+    display: table;
     margin: 80px auto 35px;
   }
 
@@ -642,7 +668,7 @@ table {
   font-size: 14px;
   margin: 0;
   text-align: center;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   a {
     color: #656565;
@@ -729,14 +755,14 @@ table {
     }
   }
 
-  .site-nav-item {
-    display: block;
-    margin: 15px 0;
+  .site-nav {
+    display: flex;
+    justify-content: space-around;
+    // display: block;
+    // margin: 15px 0;
   }
 
   .post-header {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
     p {
       word-wrap: break-word;
       overflow-wrap: break-word;
@@ -748,7 +774,7 @@ table {
   .author-name,
   .author-heading {
     font-size: 42px;
-    margin-top: 5px;
+    padding-top:15px;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }

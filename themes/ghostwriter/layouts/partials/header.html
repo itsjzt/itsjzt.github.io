@@ -38,44 +38,47 @@
                                 <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
                             </h1>
                         {{ end }}
-                        {{ if .Site.Params.rss }}
-                            <a class="button-square" href="{{ .Site.BaseURL }}index.xml" aria-label="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
-                        {{ end }}
-                        {{ with .Site.Params.twitter }}
-                            <a class="button-square button-social hint--top" data-hint="Twitter" aria-label="Twitter" href="{{ . }}" rel="me" >
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        {{ end }}
-                        {{ with .Site.Params.facebook }}
-                            <a class="button-square button-social hint--top" data-hint="Facebook" aria-label="Facebook" href="{{ . }}" rel="me">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        {{ end }}
-                        {{ with .Site.Params.gitlab }}
-                            <a class="button-square button-social hint--top" data-hint="Gitlab" aria-label="Gitlab" href="{{ . }}" rel="me">
-                                <i class="fa fa-gitlab" aria-hidden="true"></i>
-                            </a>
-                        {{ end }}
-                        {{ with .Site.Params.github }}
-                            <a class="button-square button-social hint--top" data-hint="Github" aria-label="Github" href="{{ . }}" rel="me">
-                                <i class="fa fa-github-alt" aria-hidden="true"></i>
-                            </a>
-                        {{ end }}
-                        {{ with .Site.Params.stackoverflow }}
-                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" aria-label="Stack Overflow" href="{{ . }}" rel="me">
-                                <i class="fa fa-stack-overflow" aria-hidden="true"></i>
-                            </a>
-                        {{ end }}
-                        {{ with .Site.Params.linkedin }}
-                            <a class="button-square button-social hint--top" data-hint="LinkedIn" aria-label="LinkedIn" href="{{ . }}" rel="me">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        {{ end }}
-                        {{ with .Site.Params.email }}
-                            <a class="button-square button-social hint--top" data-hint="Email" aria-label="Send an Email" href="mailto:{{ . }}">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </a>
-                        {{ end }}
+
+                        <div class="site-title-links">
+                            {{ if .Site.Params.rss }}
+                                <a class="button-square" href="{{ .Site.BaseURL }}index.xml" aria-label="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                            {{ end }}
+                            {{ with .Site.Params.twitter }}
+                                <a class="button-square button-social hint--top" data-hint="Twitter" aria-label="Twitter" href="{{ . }}" rel="me" >
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            {{ end }}
+                            {{ with .Site.Params.facebook }}
+                                <a class="button-square button-social hint--top" data-hint="Facebook" aria-label="Facebook" href="{{ . }}" rel="me">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            {{ end }}
+                            {{ with .Site.Params.gitlab }}
+                                <a class="button-square button-social hint--top" data-hint="Gitlab" aria-label="Gitlab" href="{{ . }}" rel="me">
+                                    <i class="fa fa-gitlab" aria-hidden="true"></i>
+                                </a>
+                            {{ end }}
+                            {{ with .Site.Params.github }}
+                                <a class="button-square button-social hint--top" data-hint="Github" aria-label="Github" href="{{ . }}" rel="me">
+                                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                                </a>
+                            {{ end }}
+                            {{ with .Site.Params.stackoverflow }}
+                                <a class="button-square button-social hint--top" data-hint="Stack Overflow" aria-label="Stack Overflow" href="{{ . }}" rel="me">
+                                    <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+                                </a>
+                            {{ end }}
+                            {{ with .Site.Params.linkedin }}
+                                <a class="button-square button-social hint--top" data-hint="LinkedIn" aria-label="LinkedIn" href="{{ . }}" rel="me">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            {{ end }}
+                            {{ with .Site.Params.email }}
+                                <a class="button-square button-social hint--top" data-hint="Email" aria-label="Send an Email" href="mailto:{{ . }}">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </a>
+                            {{ end }}
+                        </div>
                     </div>
 
                     <ul class="site-nav">
