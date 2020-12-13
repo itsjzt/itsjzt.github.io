@@ -95,8 +95,8 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .site-nav-item a[href] { color: #fefefe; }
 #latest-post { display: none; }
 .post-container { margin: 0 40px; }
-.post-header { padding-top: 20px; text-align: center; }
-.post-title, .page-title { font-size: 52px; font-weight: 700; margin: 15px 0; text-align: center; }
+.post-header { padding-top: 20px; }
+.post-title, .page-title { font-size: 52px; font-weight: 700; margin: 15px 0; }
 .page-title { margin: 15px 40px; }
 .post-date, .post-reading, .blog-description { color: #aeadad; font-size: 14px; font-weight: 600; line-height: 1; margin: 25px 0 0; }
 .post-date a, .post-reading a, .blog-description a { color: #aeadad; }
