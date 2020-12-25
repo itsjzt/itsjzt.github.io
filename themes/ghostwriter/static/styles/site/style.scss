@@ -2,11 +2,11 @@
 // ============================================================ //
 // ============================================================ //
 
-$primary: #15796E;
+$primary: #dcb077;
 $secondary: #303030;
 $background: #fefefe;
-$sans-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$serif-font-stack: 'Iowan Old Style', 'Apple Garamond', Baskerville, 'Times New Roman', 'Droid Serif', Times, 'Source Serif Pro', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$sans-font-stack: "Source Sans Pro", sans-serif;
+$serif-font-stack: "Source Serif Pro", serif;
 $mono-font-stack: Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
 
 /* ============================================================ */
@@ -48,6 +48,7 @@ h6 {
 
 h1 {
   font-size: 32px;
+  font-family: $serif-font-stack;
 }
 h2 {
   font-size: 28px;
@@ -364,8 +365,8 @@ table {
 
 .post-title,
 .page-title {
-  font-size: 52px;
-  font-weight: 700;
+  font-size: 60px;
+  font-weight: 900;
   margin: 15px 0;
   // text-align: center;
   // text-transform: uppercase;

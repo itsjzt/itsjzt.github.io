@@ -14,7 +14,9 @@
         <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/site.css">
         <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/syntax.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        {{ if .OutputFormats.Get "RSS" }}
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&family=Source+Serif+Pro:wght@900&display=swap" rel="stylesheet">        {{ if .OutputFormats.Get "RSS" }}
             <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml">
         {{ end }}
         {{ partial "extra-in-head.html" . }}
